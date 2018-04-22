@@ -33,7 +33,7 @@ static uint32_t g_comm_id_web = 0;
 
 /*Web request地址*/
  
-#define DATA_WEB 	  "http://192.168.23.1:3000/"
+#define DATA_WEB 	  "http://www.zzes1314.cn:3000/"
  
 char path1[30] = "buttonclick1";
 char path0[30] = "buttonclick0";
@@ -92,7 +92,7 @@ static void counter_select_up(void *context)
 			char hint[20] = "";
 			if (g_count_index == 0)
 			{
-				sprintf(hint, "%s", "按上下键控制");
+				sprintf(hint, "%s", "按上键控制喂食");
 			}
 			else
 			{
@@ -136,7 +136,7 @@ static void counter_select_down(void *context)
 			char hint[20] = "";
 			if (g_count_index == 0)
 			{
-				sprintf(hint, "%s", "按上下键控制");
+				sprintf(hint, "%s", "按上控制喂食");
 			}
 			else
 			{
@@ -244,7 +244,7 @@ static P_Window counter_init_window()
 	char text1[20] = "";
 	if (g_count_index == 0)
 	{
-		sprintf(text1, "%s", "按上下键加减");
+		sprintf(text1, "%s", "按上控制喂食");
 	}
 	else
 	{
@@ -271,14 +271,14 @@ static P_Window counter_init_window()
 
 int main()
 {
-//simulator_init();
+simulator_init();
 	/*APP编写*/
 	/*创建日期时间设置窗口*/
 	P_Window p_window = counter_init_window(); 
 
 	/*放入窗口栈显示*/
 	app_window_stack_push(p_window);
-//simulator_wait();
+simulator_wait();
 	return 0;
 
 }
