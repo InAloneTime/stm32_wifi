@@ -271,14 +271,14 @@ static P_Window counter_init_window()
 
 int main()
 {
-simulator_init();
+/*simulator_init();*/
 	/*APP编写*/
 	/*创建日期时间设置窗口*/
 	P_Window p_window = counter_init_window(); 
 
 	/*放入窗口栈显示*/
 	app_window_stack_push(p_window);
-simulator_wait();
+/*simulator_wait();*/
 	return 0;
 
 }

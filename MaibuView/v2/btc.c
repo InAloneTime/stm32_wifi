@@ -11,7 +11,7 @@
 static uint32_t g_comm_id_web = 0;
 
 /*Web request地址*/
-#define DATA_WEB     "http://127.0.0.1:3000/newwatch"
+#define DATA_WEB     "http://www.zzes1314.cn:3000/newwatch"
 
 /* 时间项 */
 #define DATE_TEXT_POS_X                      2
@@ -297,7 +297,7 @@ static void data_timer_callback(date_time_t tick_time, uint32_t millis, void *co
 
 int main()
 {
-    simulator_init();
+    //simulator_init();
     /*创建消息列表窗口*/
     h_window = init_btc_window(); 
 
@@ -317,7 +317,7 @@ int main()
 
     //每隔10s更新数据
     app_window_timer_subscribe(h_window, 10000, data_timer_callback, (void *)h_window);
-    simulator_wait();
+    //simulator_wait();
     return 0;
 
 }

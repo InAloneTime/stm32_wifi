@@ -4,13 +4,13 @@
 	************************************************************
 	*	文件名： 	onenet.c
 	*
-	*	作者： 		张继瑞
+	*	作者： 		任志伟
 	*
-	*	日期： 		2016-12-2
+	*	日期： 		2017-9-29
 	*
 	*	版本： 		V1.0
 	*
-	*	说明： 		与onenet平台的数据交互，协议层
+	*	说明： 	  协议层
 	*
 	*	修改记录：	
 	************************************************************
@@ -51,8 +51,8 @@
 
 
 
-
-ONETNET_INFO oneNetInfo = {"192.168.23.1", "4001", 0, 0, 0, 0};
+//119.29.201.31
+ONETNET_INFO oneNetInfo = {"119.28.84.27", "4001", 0, 0, 0, 0};
 extern DATA_STREAM dataStream[];
 
 
@@ -357,9 +357,9 @@ void OneNet_Status(void)
 
 /*
 ************************************************************
-*	函数名称：	OneNet_Event
+*	函数名称：	Net_Event
 *
-*	函数功能：	平台返回数据检测
+*	函数功能：	网络控制函数 控制开关喂食
 *
 *	入口参数：	dataPtr：平台返回的数据
 *
@@ -368,18 +368,21 @@ void OneNet_Status(void)
 *	说明：		
 ************************************************************
 */
-void OneNet_Event(unsigned char *dataPtr)
+void Net_Event(unsigned char *dataPtr)
 {
 		if(strstr((char *)dataPtr, "1"))
 		{
 			UsartPrintf(USART_DEBUG, "开\r\n");
+			TIM3->CCR1= 300;//open
+			DelayXms(1000);
+			TIM3->CCR1= 735;//close
 			Led4_Set(LED_ON);
 		}
 		else if(strstr((char *)dataPtr,"0")){
 			UsartPrintf(USART_DEBUG,"关\r\n");
+			
 			Led4_Set(LED_OFF);
 		}
-
 //	if(strstr((char *)dataPtr, "CLOSED"))
 //	{
 //		UsartPrintf(USART_DEBUG, "TCP CLOSED1\r\n");
@@ -402,7 +405,7 @@ void OneNet_Event(unsigned char *dataPtr)
 //			oneNetInfo.errCount++;
 //		}
 //	}
-	
+//	
 	NET_DEVICE_ClrData();
 
 }
