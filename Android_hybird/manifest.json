@@ -1,16 +1,16 @@
 {
 	"@platforms": ["android", "iPhone", "iPad"],
 	"id": "H5201A237",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "IOT",/*应用名称，程序桌面图标名称*/
+	"name": "爱宠之家",/*应用名称，程序桌面图标名称*/
 	"version": {
-		"name": "0.2.0",/*应用版本名称*/
+		"name": "1.8.1",/*应用版本名称*/
 		"code": "83"
 	},
-	"description": "物联网数据平台",/*应用描述信息*/
+	"description": "爱宠之家",/*应用描述信息*/
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -124,7 +124,7 @@
 				"keystore": "",/*Android应用打包使用的密钥库文件*/
 				"password": "",/*Android应用打包使用密钥库中证书的密码*/
 				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.SEND_SMS\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.READ_SMS\"/>"]
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.SEND_SMS\"/>","<uses-permission android:name=\"android.permission.INTERNET\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.READ_SMS\"/>"]
 			},
 			"orientation": ["portrait-primary", "portrait-secondary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
 			"icons": {
@@ -183,64 +183,99 @@
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "imgs/bg_1.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "imgs/bg_2.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "imgs/bg.png"
+					"hdpi": "imgs/bg1.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "imgs/bg2.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "imgs/bg3.png"
 				}
 			}
-		}
+		},"ads":{"rp":false,"splash":true,"push":false},"adid":""
 	},"fullscreen":false,
 	"dependencies":{
-	  "pages": {
-	    "pages/device1.html": {
-	      "href": "pages/device1.html",
-	      "resources": [
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css",
-	        "js/mui.min.js",
-	        "libs/echarts.js"
-	      ],
-	      "priority": 0,
-	      "refer": []
-	    },
-	    "list.html": {
-	      "href": "list.html",
-	      "resources": [
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "imgs/zvd.png"
-	      ],
-	      "refer": [
-	        "pages/device1.html"
-	      ],
-	      "priority": 0
-	    },
-	    "index.html": {
-	      "href": "index.html",
-	      "resources": [
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "imgs/zvd.png"
-	      ],
-	      "refer": [
-	        "list.html",
-	        "pages/device1.html"
-	      ],
-	      "priority": 0
-	    }
-	  },
-	  "idle": {
-	    "resources": [
-	      "imgs/bg.png",
-	      "imgs/bg_1.png",
-	      "js/mui.js",
-	      "imgs/bg_2.png",
-	      "css/mui.css"
-	    ]
-	  }
+		"pages": {
+			"pages/device1.html": {
+				"href": "pages/device1.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js",
+					"libs/echarts.js",
+					"pages/device1_son.html"
+				],
+				"priority": 0,
+				"refer": []
+			},
+			"list.html": {
+				"href": "list.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"imgs/zvd.png",
+					"imgs/f0.jpg",
+					"imgs/1.png",
+					"imgs/f1.gif",
+					"imgs/0.png"
+				],
+				"refer": [
+					"pages/device1.html",
+					"pages/device2.html"
+				],
+				"priority": 0
+			},
+			"index.html": {
+				"href": "index.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"imgs/zvd.png",
+					"list.html"
+				],
+				"refer": [
+					"pages/device1.html"
+				],
+				"priority": 0
+			},
+			"pages/device2.html": {
+				"resources": [
+					"css/app.css",
+					"css/mui.min.css",
+					"libs/echarts.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/device1_son.html": {
+				"resources": [
+					"libs/echarts.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"imgs/zvd.png"
+				],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"imgs/bg.png",
+				"imgs/bg_1.png",
+				"js/mui.js",
+				"imgs/bg_2.png",
+				"css/mui.css"
+			]
+		}
 	},
 	"unpackage":[
 	  "imgs/bg.png",
