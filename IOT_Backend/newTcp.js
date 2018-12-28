@@ -5,9 +5,9 @@ var redis = require('redis')
 // 配置数据库
 var conn = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: 'klren0312',
-    database: 'nodemysql',
+    user: '',
+    password: '',
+    database: '',
     port: 3306
 });
 // 连接数据库
